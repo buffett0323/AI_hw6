@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "prompt": "How many colors are traditionally recognized in a visible spectrum or optical rainbow?"
+    },
+    {
+        "id": 2,
+        "prompt": "In a basket, there are 20 oranges, 60 apples, and 40 bananas. If 15 pears were added, and half of the oranges were removed, what would be the new ratio of oranges to apples, bananas, and pears combined within the basket?"
+    },
+    {
+        "id": 3,
+        "prompt": "If you were a car salesperson, how would you convince a potential buyer to purchase an electric vehicle?"
+    },
+    {
+        "id": 4,
+        "prompt": "Break down the process of photosynthesis into a bullet-pointed list, detailing each stage and the overall purpose of the process in sustaining life on Earth."
+    },
+    {
+        "id": 5,
+        "prompt": "Explain why college students should get a library card."
+    },
+    {
+        "id": 6,
+        "prompt": "What popular toy was invented in 1943 by Richard James, an engineer who accidentally knocked a torsion spring off his workbench?"
+    },
+    {
+        "id": 7,
+        "prompt": "Which famous movie prop designs have become iconic symbols in film history?"
+    },
+    {
+        "id": 8,
+        "prompt": "A curve with a 120 m radius on a level road is banked at the correct angle for a speed of 20 m/s. If an automobile rounds this curve at 30 m/s, what is the minimum coefficient of static friction needed between tires and road to prevent skidding?"
+    },
+    {
+        "id": 9,
+        "prompt": "What can't you see, hear or feel, until its too late. What shadows love, and shopkeepers hate?"
+    },
+    {
+        "id": 10,
+        "prompt": "In a basket, there are 20 oranges, 60 apples, and 40 bananas. If 15 pears were added, and half of the oranges were removed, what would be the new ratio of oranges to apples, bananas, and pears combined within the basket?"
+    }
+]
