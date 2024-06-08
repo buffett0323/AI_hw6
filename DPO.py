@@ -7,10 +7,10 @@ import wandb
 from tqdm.auto import tqdm
 from trl import DPOTrainer
 from datasets import load_dataset
-from unsloth import FastLanguageModel
+from unsloth import FastLanguageModel, PatchDPOTrainer
 from unsloth import is_bfloat16_supported
 from transformers import TrainingArguments, TextStreamer
-
+PatchDPOTrainer()
 
 
 def DPO_train(args, output_dir):
@@ -33,14 +33,17 @@ def DPO_train(args, output_dir):
     with open("./test_prompt.json", 'r') as f:
         test_data = json.load(f)
     # ================================DO NOT CHANGE!================================
-
+    
     # Model
-    # model, tokenizer = FastLanguageModel.from_pretrained(model_name=args.model_name,...)
-    utils.YOUR_CODE_HERE
+    model, tokenizer = FastLanguageModel.from_pretrained(
+        model_name = args.model_name, # "unsloth/zephyr-sft-bnb-4bit",
+        max_seq_length = args.max_length,
+        dtype = None,
+        load_in_4bit = True,
+    )
 
     # Perform model patching and add fast LoRA weights
-    # model = FastLanguageModel.get_peft_model(model,...)
-    utils.YOUR_CODE_HERE
+    model = FastLanguageModel.get_peft_model(model, r=4, lora_alpha=32)
 
     # Training arguments
     training_args = TrainingArguments(
@@ -71,8 +74,8 @@ def DPO_train(args, output_dir):
     dpo_trainer = DPOTrainer(
         model=model,
         tokenizer=tokenizer,
-        train_dataset=utils.YOUR_CODE_HERE,
-        eval_dataset=utils.YOUR_CODE_HERE,
+        train_dataset=dataset["train"],
+        eval_dataset=dataset["test"],
         args=training_args,
         beta=args.beta,
         max_length=args.max_length,
