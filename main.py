@@ -20,7 +20,8 @@ def parse_args():
     parser.add_argument("--model_name", type=str,
                         choices=["unsloth/llama-3-8b-bnb-4bit",
                                  "unsloth/mistral-7b-v0.3-bnb-4bit",
-                                 "unsloth/tinyllama-bnb-4bit"],
+                                 "unsloth/tinyllama-bnb-4bit",
+                                 "unsloth/mistral-7b-instruct-v0.3-bnb-4bit"],
                         required=True)
     parser.add_argument("--train", action="store_true")
     parser.add_argument("--inference_base_model", action="store_true")
