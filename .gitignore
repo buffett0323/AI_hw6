@@ -1,2 +1,3 @@
-triton/
+outputs/
+wandb/
 __pycache__/
