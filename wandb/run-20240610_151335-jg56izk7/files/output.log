@@ -1,0 +1,198 @@
+
+Using cuda device
+==((====))==  Unsloth: Fast Mistral patching release 2024.5
+   \\   /|    GPU: NVIDIA GeForce RTX 3090. Max memory: 23.684 GB. Platform = Linux.
+O^O/ \_/ \    Pytorch: 2.3.0. CUDA = 8.6. CUDA Toolkit = 12.1.
+\        /    Bfloat16 = TRUE. Xformers = 0.0.26.post1. FA = True.
+ "-____-"     Free Apache license: http://github.com/unslothai/unsloth
+Unsloth 2024.5 patched 32 layers with 32 QKV layers, 32 O layers and 32 MLP layers.
+/home/ddmanddman/miniconda3/envs/unsloth_env/lib/python3.10/site-packages/transformers/training_args.py:1474: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+/home/ddmanddman/miniconda3/envs/unsloth_env/lib/python3.10/site-packages/trl/trainer/dpo_trainer.py:332: UserWarning: When using DPODataCollatorWithPadding, you should set `remove_unused_columns=False` in your TrainingArguments we have set it for you, but you should do it yourself in the future.
+  warnings.warn(
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Map: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 12730/12730 [01:53<00:00, 111.80 examples/s]
+Map: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 129/129 [00:01<00:00, 116.60 examples/s]
+==((====))==  Unsloth - 2x faster free finetuning | Num GPUs = 1
+   \\   /|    Num examples = 12,730 | Num Epochs = 1
+O^O/ \_/ \    Batch size per device = 2 | Gradient Accumulation steps = 8
+\        /    Total batch size = 16 | Total steps = 795
+ "-____-"     Number of trainable parameters = 10,485,760
+[34m[1mwandb[39m[22m: [33mWARNING[39m The `run_name` is currently set to the same value as `TrainingArguments.output_dir`. If this was not intended, please specify a different run name by setting the `TrainingArguments.run_name` parameter.
+
+  0%|                                                                                                                                                                                                                                        | 0/795 [00:00<?, ?it/s]Could not estimate the number of tokens of the input, floating-point operations will not be computed
+  0%|▎                                                                                                                                                                                                                             | 1/795 [00:21<4:43:13, 21.40s/it]
+{'loss': 0.6931, 'learning_rate': 4.9999804802192205e-06, 'rewards/chosen': 0.0, 'rewards/rejected': 0.0, 'rewards/accuracies': 0.0, 'rewards/margins': 0.0, 'logps/rejected': -269.5804748535156, 'logps/chosen': -192.4322967529297, 'logits/rejected': -3.2650504112243652, 'logits/chosen': -3.1453468799591064, 'epoch': 0.0}
+
+
+  0%|▊                                                                                                                                                                                                                             | 3/795 [00:59<4:13:24, 19.20s/it]
+
+  1%|█                                                                                                                                                                                                                             | 4/795 [01:19<4:18:01, 19.57s/it]
+
+  1%|█▍                                                                                                                                                                                                                            | 5/795 [01:38<4:13:18, 19.24s/it]
+{'loss': 0.6111, 'learning_rate': 4.9995120207212275e-06, 'rewards/chosen': -0.0072265141643583775, 'rewards/rejected': -0.18416337668895721, 'rewards/accuracies': 0.9375, 'rewards/margins': 0.17693686485290527, 'logps/rejected': -211.48727416992188, 'logps/chosen': -149.69155883789062, 'logits/rejected': -3.152534246444702, 'logits/chosen': -2.9343013763427734, 'epoch': 0.01}
+
+  1%|█▋                                                                                                                                                                                                                            | 6/795 [02:00<4:26:42, 20.28s/it]
+
+  1%|█▉                                                                                                                                                                                                                            | 7/795 [02:20<4:25:25, 20.21s/it]
+
+
+  1%|██▌                                                                                                                                                                                                                           | 9/795 [03:00<4:23:39, 20.13s/it]
+
+  1%|██▊                                                                                                                                                                                                                          | 10/795 [03:19<4:21:03, 19.95s/it]
+{'loss': 0.5332, 'learning_rate': 4.99804827338393e-06, 'rewards/chosen': -0.08839260041713715, 'rewards/rejected': -0.4779697060585022, 'rewards/accuracies': 0.8125, 'rewards/margins': 0.38957715034484863, 'logps/rejected': -219.78294372558594, 'logps/chosen': -224.42868041992188, 'logits/rejected': -2.9911279678344727, 'logits/chosen': -2.7599756717681885, 'epoch': 0.01}
+
+  1%|███                                                                                                                                                                                                                          | 11/795 [03:39<4:17:40, 19.72s/it]
+
+
+  2%|███▌                                                                                                                                                                                                                         | 13/795 [04:18<4:15:10, 19.58s/it]
+{'loss': 0.5225, 'learning_rate': 4.996701878184519e-06, 'rewards/chosen': -0.18230324983596802, 'rewards/rejected': -0.5759243369102478, 'rewards/accuracies': 0.875, 'rewards/margins': 0.3936210572719574, 'logps/rejected': -188.025390625, 'logps/chosen': -138.08238220214844, 'logits/rejected': -3.120987892150879, 'logits/chosen': -2.9032158851623535, 'epoch': 0.02}
+
+  2%|███▉                                                                                                                                                                                                                         | 14/795 [04:38<4:17:07, 19.75s/it]
+
+  2%|████▏                                                                                                                                                                                                                        | 15/795 [04:59<4:21:29, 20.12s/it]
+
+  2%|████▍                                                                                                                                                                                                                        | 16/795 [05:18<4:17:13, 19.81s/it]
+
+  2%|████▋                                                                                                                                                                                                                        | 17/795 [05:35<4:05:24, 18.93s/it]Traceback (most recent call last):
+  File "/home/ddmanddman/buffett_use/AI_hw6/main.py", line 81, in <module>
+    DPO.DPO_train(args, output_dir)
+  File "/home/ddmanddman/buffett_use/AI_hw6/DPO.py", line 86, in DPO_train
+    dpo_trainer.train()
+  File "/home/ddmanddman/miniconda3/envs/unsloth_env/lib/python3.10/site-packages/transformers/trainer.py", line 1885, in train
+    return inner_training_loop(
+  File "<string>", line 348, in _fast_inner_training_loop
+  File "/home/ddmanddman/miniconda3/envs/unsloth_env/lib/python3.10/site-packages/transformers/trainer.py", line 3238, in training_step
+    loss = self.compute_loss(model, inputs)
+  File "/home/ddmanddman/miniconda3/envs/unsloth_env/lib/python3.10/site-packages/trl/trainer/dpo_trainer.py", line 1081, in compute_loss
+    loss, metrics = self.get_batch_loss_metrics(model, inputs, train_eval="train")
+  File "/home/ddmanddman/miniconda3/envs/unsloth_env/lib/python3.10/site-packages/trl/trainer/dpo_trainer.py", line 1037, in get_batch_loss_metrics
+    ) = self.concatenated_forward(self.model, batch)
+  File "/home/ddmanddman/miniconda3/envs/unsloth_env/lib/python3.10/site-packages/trl/trainer/dpo_trainer.py", line 985, in concatenated_forward
+    all_logits = model(
+  File "/home/ddmanddman/miniconda3/envs/unsloth_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ddmanddman/miniconda3/envs/unsloth_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ddmanddman/miniconda3/envs/unsloth_env/lib/python3.10/site-packages/accelerate/utils/operations.py", line 822, in forward
+    return model_forward(*args, **kwargs)
+  File "/home/ddmanddman/miniconda3/envs/unsloth_env/lib/python3.10/site-packages/accelerate/utils/operations.py", line 810, in __call__
+    return convert_to_fp32(self.model_forward(*args, **kwargs))
+  File "/home/ddmanddman/miniconda3/envs/unsloth_env/lib/python3.10/site-packages/torch/amp/autocast_mode.py", line 16, in decorate_autocast
+    return func(*args, **kwargs)
+  File "/home/ddmanddman/miniconda3/envs/unsloth_env/lib/python3.10/site-packages/unsloth/models/llama.py", line 883, in PeftModelForCausalLM_fast_forward
+    return self.base_model(
+  File "/home/ddmanddman/miniconda3/envs/unsloth_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ddmanddman/miniconda3/envs/unsloth_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ddmanddman/miniconda3/envs/unsloth_env/lib/python3.10/site-packages/peft/tuners/tuners_utils.py", line 179, in forward
+    return self.model.forward(*args, **kwargs)
+  File "/home/ddmanddman/miniconda3/envs/unsloth_env/lib/python3.10/site-packages/accelerate/hooks.py", line 166, in new_forward
+    output = module._old_forward(*args, **kwargs)
+  File "/home/ddmanddman/miniconda3/envs/unsloth_env/lib/python3.10/site-packages/unsloth/models/mistral.py", line 213, in MistralForCausalLM_fast_forward
+    outputs = self.model(
+  File "/home/ddmanddman/miniconda3/envs/unsloth_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ddmanddman/miniconda3/envs/unsloth_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ddmanddman/miniconda3/envs/unsloth_env/lib/python3.10/site-packages/accelerate/hooks.py", line 166, in new_forward
+    output = module._old_forward(*args, **kwargs)
+  File "/home/ddmanddman/miniconda3/envs/unsloth_env/lib/python3.10/site-packages/unsloth/models/llama.py", line 669, in LlamaModel_fast_forward
+    layer_outputs = torch.utils.checkpoint.checkpoint(
+  File "/home/ddmanddman/miniconda3/envs/unsloth_env/lib/python3.10/site-packages/torch/_compile.py", line 24, in inner
+    return torch._dynamo.disable(fn, recursive)(*args, **kwargs)
+  File "/home/ddmanddman/miniconda3/envs/unsloth_env/lib/python3.10/site-packages/torch/_dynamo/eval_frame.py", line 451, in _fn
+    return fn(*args, **kwargs)
+  File "/home/ddmanddman/miniconda3/envs/unsloth_env/lib/python3.10/site-packages/torch/_dynamo/external_utils.py", line 36, in inner
+    return fn(*args, **kwargs)
+  File "/home/ddmanddman/miniconda3/envs/unsloth_env/lib/python3.10/site-packages/torch/utils/checkpoint.py", line 487, in checkpoint
+    return CheckpointFunction.apply(function, preserve, *args)
+  File "/home/ddmanddman/miniconda3/envs/unsloth_env/lib/python3.10/site-packages/torch/autograd/function.py", line 598, in apply
+    return super().apply(*args, **kwargs)  # type: ignore[misc]
+  File "/home/ddmanddman/miniconda3/envs/unsloth_env/lib/python3.10/site-packages/torch/utils/checkpoint.py", line 262, in forward
+    outputs = run_function(*args)
+  File "/home/ddmanddman/miniconda3/envs/unsloth_env/lib/python3.10/site-packages/unsloth/models/llama.py", line 665, in custom_forward
+    return module(*inputs, past_key_value, output_attentions, padding_mask = padding_mask)
+  File "/home/ddmanddman/miniconda3/envs/unsloth_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ddmanddman/miniconda3/envs/unsloth_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ddmanddman/miniconda3/envs/unsloth_env/lib/python3.10/site-packages/accelerate/hooks.py", line 166, in new_forward
+    output = module._old_forward(*args, **kwargs)
+  File "/home/ddmanddman/miniconda3/envs/unsloth_env/lib/python3.10/site-packages/unsloth/models/llama.py", line 434, in LlamaDecoderLayer_fast_forward
+    hidden_states, self_attn_weights, present_key_value = self.self_attn(
+  File "/home/ddmanddman/miniconda3/envs/unsloth_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ddmanddman/miniconda3/envs/unsloth_env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ddmanddman/miniconda3/envs/unsloth_env/lib/python3.10/site-packages/accelerate/hooks.py", line 166, in new_forward
+    output = module._old_forward(*args, **kwargs)
+  File "/home/ddmanddman/miniconda3/envs/unsloth_env/lib/python3.10/site-packages/unsloth/models/mistral.py", line 69, in MistralAttention_fast_forward
+    Q, K, V = self.apply_qkv(self, hidden_states)
+  File "/home/ddmanddman/miniconda3/envs/unsloth_env/lib/python3.10/site-packages/unsloth/kernels/fast_lora.py", line 312, in apply_lora_qkv
+    Q, K, V = LoRA_QKV.apply(X,
+  File "/home/ddmanddman/miniconda3/envs/unsloth_env/lib/python3.10/site-packages/torch/autograd/function.py", line 598, in apply
+    return super().apply(*args, **kwargs)  # type: ignore[misc]
+  File "/home/ddmanddman/miniconda3/envs/unsloth_env/lib/python3.10/site-packages/torch/cuda/amp/autocast_mode.py", line 115, in decorate_fwd
+    return fwd(*args, **kwargs)
+  File "/home/ddmanddman/miniconda3/envs/unsloth_env/lib/python3.10/site-packages/unsloth/kernels/fast_lora.py", line 229, in forward
+    V = matmul_lora(X, VW, VW_quant, VA, VB, VS)
+  File "/home/ddmanddman/miniconda3/envs/unsloth_env/lib/python3.10/site-packages/unsloth/kernels/utils.py", line 235, in matmul_lora
+    out = torch.matmul(X, W, out = out)
+KeyboardInterrupt
