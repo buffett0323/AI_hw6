@@ -1,0 +1,194 @@
+{
+    "os": "Linux-5.15.0-112-generic-x86_64-with-glibc2.35",
+    "python": "3.10.14",
+    "heartbeatAt": "2024-06-11T04:05:26.182611",
+    "startedAt": "2024-06-11T04:05:25.276958",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--exp_name",
+        "ORPO",
+        "--model_name",
+        "unsloth/mistral-7b-v0.3-bnb-4bit",
+        "--train",
+        "--wandb_token",
+        "0aad23b14e9c1e0e2342caaefbcf3c240a8a3e5e",
+        "--num_epochs",
+        "1",
+        "--train_batch_size",
+        "4",
+        "--eval_batch_size",
+        "4"
+    ],
+    "state": "running",
+    "program": "/home/ddmanddman/buffett_use/AI_hw6/main.py",
+    "codePathLocal": "main.py",
+    "codePath": "main.py",
+    "git": {
+        "remote": "https://github.com/buffett0323/AI_hw6.git",
+        "commit": "21840313015b09b20c93d456bb9959e9a97661b1"
+    },
+    "email": "philip910323@gmail.com",
+    "root": "/home/ddmanddman/buffett_use/AI_hw6",
+    "host": "terra",
+    "username": "ddmanddman",
+    "executable": "/home/ddmanddman/miniconda3/envs/unsloth_env/bin/python",
+    "cpu_count": 12,
+    "cpu_count_logical": 24,
+    "cpu_freq": {
+        "current": 2476.5623750000004,
+        "min": 800.0,
+        "max": 3300.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2656.364,
+            "min": 800.0,
+            "max": 3300.0
+        },
+        {
+            "current": 2648.46,
+            "min": 800.0,
+            "max": 3300.0
+        },
+        {
+            "current": 2706.596,
+            "min": 800.0,
+            "max": 3300.0
+        },
+        {
+            "current": 2700.0,
+            "min": 800.0,
+            "max": 3300.0
+        },
+        {
+            "current": 2690.082,
+            "min": 800.0,
+            "max": 3300.0
+        },
+        {
+            "current": 2688.484,
+            "min": 800.0,
+            "max": 3300.0
+        },
+        {
+            "current": 2700.0,
+            "min": 800.0,
+            "max": 3300.0
+        },
+        {
+            "current": 2200.0,
+            "min": 800.0,
+            "max": 3300.0
+        },
+        {
+            "current": 2659.204,
+            "min": 800.0,
+            "max": 3300.0
+        },
+        {
+            "current": 2705.938,
+            "min": 800.0,
+            "max": 3300.0
+        },
+        {
+            "current": 2700.0,
+            "min": 800.0,
+            "max": 3300.0
+        },
+        {
+            "current": 2700.0,
+            "min": 800.0,
+            "max": 3300.0
+        },
+        {
+            "current": 1200.0,
+            "min": 800.0,
+            "max": 3300.0
+        },
+        {
+            "current": 2699.997,
+            "min": 800.0,
+            "max": 3300.0
+        },
+        {
+            "current": 2697.324,
+            "min": 800.0,
+            "max": 3300.0
+        },
+        {
+            "current": 800.0,
+            "min": 800.0,
+            "max": 3300.0
+        },
+        {
+            "current": 2676.824,
+            "min": 800.0,
+            "max": 3300.0
+        },
+        {
+            "current": 2699.293,
+            "min": 800.0,
+            "max": 3300.0
+        },
+        {
+            "current": 2699.998,
+            "min": 800.0,
+            "max": 3300.0
+        },
+        {
+            "current": 2596.55,
+            "min": 800.0,
+            "max": 3300.0
+        },
+        {
+            "current": 2699.998,
+            "min": 800.0,
+            "max": 3300.0
+        },
+        {
+            "current": 2699.966,
+            "min": 800.0,
+            "max": 3300.0
+        },
+        {
+            "current": 1500.0,
+            "min": 800.0,
+            "max": 3300.0
+        },
+        {
+            "current": 2712.419,
+            "min": 800.0,
+            "max": 3300.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 878.1072120666504,
+            "used": 536.1258697509766
+        }
+    },
+    "gpu": "NVIDIA GeForce RTX 3090",
+    "gpu_count": 4,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 3090",
+            "memory_total": 25769803776
+        },
+        {
+            "name": "NVIDIA GeForce RTX 3090",
+            "memory_total": 25769803776
+        },
+        {
+            "name": "NVIDIA GeForce RTX 3090",
+            "memory_total": 25769803776
+        },
+        {
+            "name": "NVIDIA GeForce RTX 3090",
+            "memory_total": 25769803776
+        }
+    ],
+    "memory": {
+        "total": 188.0662498474121
+    }
+}
