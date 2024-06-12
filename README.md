@@ -1,14 +1,16 @@
-## Title
-Artificial Homework 6
-2024/06/12
+# Artificial Homework 6
 
-## Arthors
-B09208038 地理四 劉正悅 
+**Date**: 2024/06/12
+
+**Author**: B09208038 地理四 劉正悅
+
+---
 
 ## 💾 Installation Instructions
+
 ### Conda Installation
-For the installation, I refer to the TA's instruction.
-e.g. I select `pytorch-cuda=12.1` for CUDA 12.1. Replace with 11.8 or else if you have different version.
+
+For the installation, I refer to the TA's instruction. For example, I select `pytorch-cuda=12.1` for CUDA 12.1. Replace with 11.8 or another version if you have a different version.
 
 ```bash
 conda create --name unsloth_env python=3.10
@@ -22,8 +24,9 @@ pip install --no-deps trl peft accelerate bitsandbytes
 pip install tqdm packaging wandb
 ```
 
-### Problem solving
-Please use `python -m xformers.info` to see whether the triton_available is True. If not, please do the following command.
+### Problem Solving
+
+Please use `python -m xformers.info` to check if `triton_available` is `True`. If not, please run the following commands:
 
 ```bash
 conda uninstall triton -y
@@ -34,24 +37,29 @@ conda install pytorch-cuda=12.1 pytorch cudatoolkit xformers -c pytorch -c nvidi
 ```
 
 ### Requirements
-Or you can try installing with the following command.
-```bash 
-pip install -r requirements.txt 
+
+Alternatively, you can install the required packages using the following command:
+
+```bash
+pip install -r requirements.txt
 ```
 
-## Code running
-I have added some parameters in the `run.sh` file, and i trained on GPU RTX 3090 machine. 
-You can remove the batch size settings if it doesn't fit your machine.
+## Code Running
 
-### Training 
-Replace the wandb_token with your token please !!!!
+I have added some parameters in the `run.sh` file, and I trained on a GPU RTX 3090 machine. You can remove the batch size settings if they don't fit your machine.
+
+Please replace the `wandb_token` with your token.
+
+### Training
 ```bash
-# Actually, the structure is bash run.sh "exp_name" "model_name" "wandb_token"
+# Structure: bash run.sh "exp_name" "model_name" "wandb_token"
 bash run.sh ORPO unsloth/mistral-7b-instruct-v0.3-bnb-4bit YOUR_WANDB_TOKEN
 ```
+---
 
 ### Inference
 ```bash
-# Actually, the structure is bash inference.sh "model_name" "wandb_token"
+# Structure: bash inference.sh "model_name" "wandb_token"
 bash inference.sh unsloth/mistral-7b-v0.3-bnb-4bit YOUR_WANDB_TOKEN
 ```
+---
